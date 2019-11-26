@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "crud"
+		},
+		{
+			"path": "events"
+		},
+		{
+			"path": "packages"
+		}
+	],
+	"settings": {
+		"debug.internalConsoleOptions": "neverOpen"
+	},
+	"launch": {
+		"configurations": [],
+		"compounds": [
+			{
+				"name": "Attach to both apps",
+				"configurations": [
+					"Attach to Crud Node Functions",
+					"Attach to Events Node Functions"
+				]
+			}
+		]
+	}
+}
