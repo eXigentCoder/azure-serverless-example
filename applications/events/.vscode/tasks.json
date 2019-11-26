@@ -15,8 +15,8 @@
         },
         {
             "type": "shell",
-            "label": "npm prune",
-            "command": "npm prune --production",
+            "label": "Install Prod Dependencies",
+            "command": "npm install --production",
             "problemMatcher": []
         }
     ]
