@@ -1,9 +1,15 @@
 {
     "routes": [
         {
-            "path_prefix": "/",
+            "path_prefix": "/api",
             "policies": {
                 "unauthenticated_action": "RejectWith401"
+            }
+        },
+        {
+            "path_prefix": "/api/anon-http",
+            "policies": {
+                "unauthenticated_action": "AllowAnonymous"
             }
         }
     ]
