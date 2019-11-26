@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"No tests yet...\""
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "ms-oss-example-common": "^0.0.1"
+  }
 }
