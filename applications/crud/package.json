@@ -2,10 +2,15 @@
   "name": "crud",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "10.14.1",
+    "npm": ">= 6.4.1"
+  },
   "scripts": {
-    "test": "echo \"No tests yet...\""
+    "test": "echo \"No tests yet...\"",
+    "build": "npm i --production"
   },
   "dependencies": {
-    "ms-oss-example-common": "^0.0.1"
+    "ms-oss-example-common": "0.0.1"
   }
 }

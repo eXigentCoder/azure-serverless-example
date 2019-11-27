@@ -1,0 +1,20 @@
+{
+    "scriptFile": "./azure-fn.js",
+    "bindings": [
+        {
+            "route": "quality-of-life",
+            "authLevel": "anonymous",
+            "type": "httpTrigger",
+            "direction": "in",
+            "name": "req",
+            "methods": [
+                "get"
+            ]
+        },
+        {
+            "type": "http",
+            "direction": "out",
+            "name": "$return"
+        }
+    ]
+}

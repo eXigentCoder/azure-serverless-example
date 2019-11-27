@@ -2,6 +2,10 @@
   "name": "ms-oss-example-common",
   "version": "0.0.1",
   "description": "The junk drawer of the coding world",
+  "engines": {
+    "node": "10.14.1",
+    "npm": ">= 6.4.1"
+  },
   "keywords": [
     "common"
   ],
@@ -25,5 +29,8 @@
   },
   "bugs": {
     "url": "https://github.com/eXigentCoder/azure-serverless-example/issues"
+  },
+  "dependencies": {
+    "@hapi/boom": "8.0.1"
   }
 }

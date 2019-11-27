@@ -3,13 +3,31 @@
         {
             "path_prefix": "/api",
             "policies": {
+                "unauthenticated_action": "AllowAnonymous"
+            }
+        },
+        {
+            "path_prefix": "/api/1-anonymous",
+            "policies": {
+                "unauthenticated_action": "AllowAnonymous"
+            }
+        },
+        {
+            "path_prefix": "/api/2-secure",
+            "policies": {
                 "unauthenticated_action": "RejectWith401"
             }
         },
         {
-            "path_prefix": "/api/anon-http",
+            "path_prefix": "/api/3-secret",
             "policies": {
-                "unauthenticated_action": "AllowAnonymous"
+                "unauthenticated_action": "RejectWith404"
+            }
+        },
+        {
+            "path_prefix": "/api/4-redirect",
+            "policies": {
+                "unauthenticated_action": "RedirectToLoginPage"
             }
         }
     ]

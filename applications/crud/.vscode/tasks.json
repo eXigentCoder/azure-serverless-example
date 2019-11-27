@@ -15,8 +15,8 @@
         },
         {
             "type": "shell",
-            "label": "Install Prod Dependencies",
-            "command": "npm install --production",
+            "label": "Run Build",
+            "command": "npm run build",
             "problemMatcher": []
         }
     ]
