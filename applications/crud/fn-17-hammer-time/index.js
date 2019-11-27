@@ -4,4 +4,5 @@ module.exports = function(context, timer) {
         context.log('JavaScript is running late!');
     }
     context.log('Timer just ran');
+    return context.done();
 };
