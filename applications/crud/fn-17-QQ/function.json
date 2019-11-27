@@ -1,0 +1,11 @@
+{
+    "bindings": [
+        {
+            "name": "HitTheQueue",
+            "type": "queueTrigger",
+            "direction": "in",
+            "queueName": "ms-oss-queue-trigger",
+            "connection": "AzureWebJobsStorage"
+        }
+    ]
+}
