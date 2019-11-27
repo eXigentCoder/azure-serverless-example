@@ -1,4 +1,5 @@
-"use strict";
+'use strict';
+
 module.exports = function() {
     return {
         mongoDb: {
@@ -6,8 +7,8 @@ module.exports = function() {
             urlConfig: {},
             clientOptions: {
                 useNewUrlParser: true,
-                ssl: true
-            }
-        }
+                ssl: true,
+            },
+        },
     };
 };

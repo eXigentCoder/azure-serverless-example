@@ -1,19 +1,24 @@
 'use strict';
-const { getDb, ObjectId } = require('../../mongodb');
-const { validators } = require('../../validation');
+const { getDb } = require('../../mongodb');
+const { inputValidator /* , outputValidator, createOutputMapper */ } = require('../../validation');
 const { getSchema } = require('./schema');
-
+const { createVersionInfoSetter } = require('@bit/exigentcoder.common-modules.version-info');
 const collectionName = 'tasks';
 
 let schemaId;
+let setVersionInfo;
 function initialise() {
     if (schemaId) {
         return;
     }
     const schema = getSchema();
-    const { inputValidator } = validators();
     inputValidator.addSchema(schema);
     schemaId = schema.$id;
+    //options.metadata.identifier.pathToId
+    setVersionInfo = createVersionInfoSetter({
+        validator: inputValidator,
+        metadata: { identifier: { pathToId: '_id' } },
+    });
 }
 
 async function create(entity, context) {
@@ -23,9 +28,9 @@ async function create(entity, context) {
     const db = await getDb();
     const collection = db.collection(collectionName);
     entity = entity || {};
-    entity._id = new ObjectId();
-    const { inputValidator } = validators();
+    entity.region = 'ZA';
     inputValidator.ensureValid(schemaId, entity);
+    setVersionInfo(entity, context);
     await collection.insertOne(entity);
     return entity;
 }

@@ -13,6 +13,7 @@
   "dependencies": {
     "@bit/exigentcoder.common-modules.azure-functions": "0.21.7",
     "@bit/exigentcoder.common-modules.config": "0.23.1",
+    "@bit/exigentcoder.common-modules.json-schema": "0.23.0",
     "@bit/exigentcoder.common-modules.mongodb": "0.23.7",
     "@bit/exigentcoder.common-modules.validation": "0.23.0",
     "@bit/exigentcoder.common-modules.validation-mongodb": "0.23.7",
