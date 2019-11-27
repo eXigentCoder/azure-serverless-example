@@ -64,7 +64,7 @@
 			"response": []
 		},
 		{
-			"name": "Hello World (No Auth)",
+			"name": "fn-01-anonymous",
 			"request": {
 				"auth": {
 					"type": "noauth"
@@ -72,37 +72,495 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://ms-oss-crud.azurewebsites.net/api/anon-http",
-					"protocol": "https",
+					"raw": "{{baseUrl}}/api/fn-01-anonymous",
 					"host": [
-						"ms-oss-crud",
-						"azurewebsites",
-						"net"
+						"{{baseUrl}}"
 					],
 					"path": [
 						"api",
-						"anon-http"
+						"fn-01-anonymous"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Hello World (Auth)",
+			"name": "fn-02-secret",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/fn-02-secret",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"fn-02-secret"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fn-03-secure",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/fn-03-secure",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"fn-03-secure"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fn-04-redirect",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://ms-oss-crud.azurewebsites.net/api/http-trigger",
-					"protocol": "https",
+					"raw": "{{baseUrl}}/api/fn-04-redirect",
 					"host": [
-						"ms-oss-crud",
-						"azurewebsites",
-						"net"
+						"{{baseUrl}}"
 					],
 					"path": [
 						"api",
-						"http-trigger"
+						"fn-04-redirect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "quality-of-life",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/quality-of-life",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"quality-of-life"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fn-06-disabled",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/fn-06-disabled",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"fn-06-disabled"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fn-07-locally-shared-code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/fn-07-locally-shared-code",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"fn-07-locally-shared-code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fn-08-shared-package",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/fn-08-shared-package",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"fn-08-shared-package"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fn-09-cold-start",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/fn-09-cold-start",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"fn-09-cold-start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fn-10-basic-uncaught-errors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/fn-10-basic-uncaught-errors",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"fn-10-basic-uncaught-errors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fn-11-handled-uncaught-errors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/fn-11-handled-uncaught-errors",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"fn-11-handled-uncaught-errors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Tasks",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Get demo working\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/tasks",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Tasks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/tasks",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get task by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/tasks/5dde979c66383840a476e299",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"5dde979c66383840a476e299"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task By Id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Updated title\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/tasks/5dde979c66383840a476e299",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"5dde979c66383840a476e299"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete task by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/tasks/5dde979c66383840a476e299",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"5dde979c66383840a476e299"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Tasks V2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Get demo working\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v2/tasks",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Tasks V2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/v2/tasks",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get task by Id V2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/v2/tasks/5ddecf46221ad428acfceabd",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"tasks",
+						"5ddecf46221ad428acfceabd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task By Id V2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Updated title\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v2/tasks/5ddecf46221ad428acfceabd",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"tasks",
+						"5ddecf46221ad428acfceabd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete task by Id V2",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/tasks/5ddecf46221ad428acfceabd",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"5ddecf46221ad428acfceabd"
 					]
 				}
 			},
