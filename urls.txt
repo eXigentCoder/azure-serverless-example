@@ -1,0 +1,10 @@
+https://ms-oss-crud.azurewebsites.net/api/fn-01-anonymous
+https://ms-oss-crud.azurewebsites.net/api/fn-02-secret
+https://ms-oss-crud.azurewebsites.net/api/fn-03-secure
+https://ms-oss-crud.azurewebsites.net/api/fn-04-redirect
+https://ms-oss-crud.azurewebsites.net/api/quality-of-life
+https://ms-oss-crud.azurewebsites.net/api/fn-06-disabled
+https://ms-oss-crud.azurewebsites.net/api/fn-07-locally-shared-code
+https://ms-oss-crud.azurewebsites.net/api/fn-08-shared-package
+https://ms-oss-crud.azurewebsites.net/api/fn-09-basic-uncaught-errors
+https://ms-oss-crud.azurewebsites.net/api/fn-10-handled-uncaught-errors

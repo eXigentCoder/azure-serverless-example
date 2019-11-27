@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@hapi/boom": "8.0.1",
-    "ms-oss-example-common": "0.0.1"
+    "ms-oss-example-common": "0.0.4"
   },
   "private": true
 }

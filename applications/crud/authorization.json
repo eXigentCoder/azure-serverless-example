@@ -1,33 +1,33 @@
 {
     "routes": [
         {
-            "path_prefix": "/api",
-            "policies": {
-                "unauthenticated_action": "AllowAnonymous"
-            }
-        },
-        {
             "path_prefix": "/api/fn-01-anonymous",
             "policies": {
                 "unauthenticated_action": "AllowAnonymous"
             }
         },
         {
-            "path_prefix": "/api/fn-02-secure",
+            "path_prefix": "/api/fn-02-secret",
             "policies": {
-                "unauthenticated_action": "RejectWith401"
+                "unauthenticated_action": "RejectWith404"
             }
         },
         {
-            "path_prefix": "/api/fn-03-secret",
+            "path_prefix": "api/fn-03-secure",
             "policies": {
-                "unauthenticated_action": "RejectWith404"
+                "unauthenticated_action": "RejectWith401"
             }
         },
         {
             "path_prefix": "/api/fn-04-redirect",
             "policies": {
                 "unauthenticated_action": "RedirectToLoginPage"
+            }
+        },
+        {
+            "path_prefix": "/api",
+            "policies": {
+                "unauthenticated_action": "RejectWith404"
             }
         }
     ]
