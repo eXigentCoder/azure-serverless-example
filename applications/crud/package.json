@@ -1,6 +1,6 @@
 {
   "name": "crud",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "engines": {
     "node": "10.14.1",
@@ -23,7 +23,7 @@
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
     "mongodb": "3.3.5",
-    "ms-oss-example-common": "0.0.4"
+    "ms-oss-example-common": "^0.0.5"
   },
   "private": true
 }

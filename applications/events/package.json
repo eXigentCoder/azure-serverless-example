@@ -1,6 +1,6 @@
 {
   "name": "events",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "engines": {
     "node": "10.14.1",
