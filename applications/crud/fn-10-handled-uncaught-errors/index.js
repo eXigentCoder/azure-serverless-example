@@ -1,15 +1,18 @@
 'use strict';
 const { azureHttpWrapper } = require('ms-oss-example-common');
+const { teapot, internal } = require('@hapi/boom');
 let counter = 0;
-/**
- * @param {import('azure-functions-ts-essentials').Context} context
- */
-module.exports = azureHttpWrapper(async function(context) {
-    context.log.info({ counter });
+
+module.exports = azureHttpWrapper(async function handledErrors({ logger }) {
+    logger.info({ counter });
     counter++;
+    const data = {
+        someBool: true,
+        someString: 'heya',
+    };
     if (counter % 2 === 0) {
-        throw new Error('leeeeeEEEEeroy jenkins!!');
+        throw internal('leeeeeEEEEeroy jenkins!!', data);
     } else {
-        return Promise.reject(new Error('delayed leeeeeEEEEeroy jenkins!!'));
+        throw teapot('Yolo', data);
     }
 });

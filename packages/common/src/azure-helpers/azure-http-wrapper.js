@@ -29,8 +29,7 @@ function azureHttpWrapper(fn) {
             let boomErr;
             if (isBoom(err)) {
                 boomErr = err;
-                if (boomErr.data) {
-                    //@ts-ignore
+                if (boomErr.data && !boomErr.isServer) {
                     boomErr.output.payload.data = boomErr.data;
                 }
             } else {
