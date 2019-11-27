@@ -9,13 +9,13 @@ module.exports = { runRequestForVerb };
  * @param {import('./types').VerbReqMap} verbReqMap
  * @returns
  */
-async function runRequestForVerb(context, req, verbReqMap) {
+async function runRequestForVerb({ context, req, logger, verbReqMap }) {
     validateVerbReqMap(verbReqMap);
     const requestsForVerb = verbReqMap[req.method.toUpperCase()];
     if (!requestsForVerb) {
         throw methodNotAllowed(`Method ${req.method} not supported.`);
     }
-    return await requestsForVerb({ req, context });
+    return await requestsForVerb({ req, context, logger });
 }
 
 /** @param {import('./types').VerbReqMap} verbReqMap */

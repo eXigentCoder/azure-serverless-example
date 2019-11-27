@@ -1,13 +1,16 @@
 {
     "bindings": [
         {
-            "route": "tasks",
+            "route": "v2/tasks/{id?}",
             "authLevel": "anonymous",
             "type": "httpTrigger",
             "direction": "in",
             "name": "req",
             "methods": [
-                "post"
+                "get",
+                "post",
+                "put",
+                "delete"
             ]
         },
         {
