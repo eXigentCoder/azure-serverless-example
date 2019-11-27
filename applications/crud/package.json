@@ -11,7 +11,17 @@
     "build": "npm i --production"
   },
   "dependencies": {
+    "@bit/exigentcoder.common-modules.azure-functions": "0.21.7",
+    "@bit/exigentcoder.common-modules.config": "0.23.1",
+    "@bit/exigentcoder.common-modules.mongodb": "0.23.7",
+    "@bit/exigentcoder.common-modules.validation": "0.23.0",
+    "@bit/exigentcoder.common-modules.validation-mongodb": "0.23.7",
+    "@bit/exigentcoder.common-modules.version-info": "0.23.7",
     "@hapi/boom": "8.0.1",
+    "ajv": "6.10.2",
+    "dotenv": "8.2.0",
+    "dotenv-expand": "5.1.0",
+    "mongodb": "3.3.5",
     "ms-oss-example-common": "0.0.4"
   },
   "private": true
